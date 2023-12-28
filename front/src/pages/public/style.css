@@ -1,0 +1,269 @@
+
+.FAQS{
+  animation-name: ShowFAQS;
+  animation-duration: .5s;
+}
+@keyframes ShowFAQS {
+  0%{transform: scale(0);}
+  100%{transform: scale(1);}
+  
+}
+.Star{
+  animation-name: ShowStars;
+  animation-duration: .4s;
+}
+@keyframes ShowStars {
+  0%{bottom: 0px;opacity: 0.5;}
+  100%{bottom: -27px;opacity: 1;}
+  
+}
+.Login::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -70px;
+  height: 70px;
+  width: 70px;
+  z-index: 2;
+  background-color: #0d2742;
+  border-bottom-right-radius: 70px;
+}
+.Login::after {
+ 
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -70px;
+  height: 70px;
+  width: 70px;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+.Home {
+  position: relative;
+  background-color: rgb(13, 39, 66);
+  background-image: url("./backk.svg");
+  background-attachment: fixed;
+  background-size: 150%;
+  background-position: left;
+  
+  /* #0D2742 */
+}
+.Back {
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #0d2742;
+  z-index: 0;
+  transform: rotate(0deg);
+}
+.LinkTo:hover {
+  background-color: white;
+  color: #ff5757;
+  transform: rotate(-5deg);
+  cursor: pointer;
+  border-radius: 1px;
+}
+.LinkToo:hover {
+  background-color: white;
+  color: #ff5757;
+  transform: rotate(5deg);
+  cursor: pointer;
+  border-radius: 1px;
+}
+.SectionA {
+  animation-name: showSectiona;
+  animation-duration: 0.5s;
+  
+  height: 90vh;
+  top: 10vh;
+}
+@keyframes showSectiona {
+  0% {
+    top: 100vh;
+  }
+
+  100% {
+    top: 10vh;
+  }
+}
+.soulign {
+  background-color: #ff5757;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  position: relative;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px inset;
+}
+.heading {
+  font-family: Bahnschrift SemiBold !important;
+}
+.BtnInscreption {
+  position: relative;
+  background-color: #ff5757 !important;
+  color: white !important;
+  transition: 0.3s !important;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 6px inset;
+}
+.BtnInscreption .links {
+  
+ color: white !important;
+ text-decoration: none;
+  
+}
+.BtnInscreption .Text {
+  font-family: Bahnschrift SemiBold !important;
+  letter-spacing: 1.2px;
+}
+.BtnInscreption:hover {
+  background-color: white !important;
+  color: #0d2742 !important;
+  /* box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 6px inset; */
+  box-shadow: rgba(0, 0, 0, 0.25) 5px 5px 6px inset;
+  transform: scale(1.02);
+}
+.BtnInscreption:hover .links{
+  
+  color: #0d2742 !important;
+  /* box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 6px inset; */
+  
+}
+.Image {
+  transition: 0.3s;
+  width: 100% !important;
+  border-radius: 10px;
+  max-height: 70vh;
+  min-height: 70vh;
+  position: relative !important;
+  box-shadow: rgba(0, 0, 0, 0.25) 5px 5px 6px;
+}
+.GridImage::before {
+  position: absolute !important;
+  content: "" !important;
+  height: 30% !important;
+  width: 30% !important;
+  background-color: #ff5757 !important;
+  bottom: 2.5rem !important;
+  left: -0.2rem !important;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 5px 5px 6px inset;
+}
+.SideBare {
+  z-index: 10;
+
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  top: 10vh;
+  left: 0vh !important;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  width: auto !important;
+  height: auto !important;
+  min-height: auto !important;
+  align-items: center !important;
+  display: flex !important;
+}
+
+.SideBare .ItemSide {
+  position: relative;
+  padding: 0.7rem 0.5rem;
+  margin-inline: 1rem;
+  margin-block: 0.1rem;
+  text-align: center;
+  color: white;
+  opacity: 0.4;
+  transition: 0.3s;
+}
+.ItemSide:hover {
+  opacity: 1 !important;
+  cursor: pointer;
+}
+#Active {
+  font-weight: bold !important;
+  opacity: 1 !important;
+  color: white !important;
+}
+.AboutCard {
+  position: relative !important;
+  background-color: white !important;
+  max-height: 60vh;
+  border-radius: 10px;
+  transition: 0.3s all;
+
+  box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 6px, rgba(0, 0, 0, 0.15) -3px 3px 6px;
+}
+.AboutCard:hover {
+  border-bottom-right-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+}
+.AboutCard:hover .BackCard {
+  bottom: -3rem;
+}
+.AboutCard img {
+  width: 100%;
+  border-bottom-right-radius: 2rem !important;
+  border-top-left-radius: 2rem !important;
+  border-radius: 5px;
+}
+.BackCard {
+  transition: 0.3s all;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 10rem;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #ff5757;
+  z-index: -1 !important ;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.linkNav {
+  color: white !important;
+  text-decoration: none !important;
+}
+.linkNav:hover {
+  color: #ff5757  !important;
+}
+.containerA {
+  z-index: 1;
+  background-color: #c4dbf5 !important;
+  position: relative;
+  max-height: 96vh !important;
+  border-radius: 1rem;
+  border: 2px solid rgb(240, 240, 240);
+  box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 6px inset;
+  /* border: 1px solid rgba(192, 192, 192, 0.2); */
+  animation-name: showcontainer;
+  animation-duration: .7s ;
+  
+}
+@keyframes showcontainer {
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+.HR{
+  border-bottom: 1px solid rgb(0, 0, 0,0.2) !important;
+}
+/* .backcontainer {
+  position: absolute;
+  width: 80%;
+  height: 100vh;
+  background-image: url("./backk.svg") !important;
+  opacity: 0.8;
+  z-index: -1;
+  
+} */
+

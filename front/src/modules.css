@@ -1,0 +1,17 @@
+li {
+  font-weight: 200px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  transition: 0.3s;
+}
+li:hover {
+  background: #ff57d5 !important;
+  color: #b33d95 !important;
+}
+.Mui-selected {
+  color: white !important;
+  background: #ff5757 !important;
+}
+.Mui-selected:hover {
+  background: #b33d95  !important;
+}

@@ -1,0 +1,61 @@
+version: "3.7"
+services:
+  qcmfront:
+    image: qcm/frontend:1.0
+    ports:
+      - "5001:5001"
+    restart: always
+    networks:
+      - backend_db
+
+  qcmapi:
+    image: qcm/backend:1.0
+    ports:
+      - "1337:5000"
+    networks:
+      - backend_db
+    restart: always
+    environment:
+      - DB=mongodb://mongo:27017/QCM
+      - JWT_SECRET=abc123/><,.
+    depends_on:
+      - mongo
+    volumes:
+      - ../back:/opt/back
+
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - mg:/data/db
+    networks:
+      - backend_db
+    # healthcheck:
+    #   test: ["CMD", "pg_isready", "-U", "postgres"]
+    #   interval: 10s
+    #   timeout: 5s
+    #   retries: 5
+    restart: on-failure
+  
+  front-gateway:
+    image: haproxy:alpine
+    ports:
+      - 80:80
+      # - 443:443
+    depends_on:
+      - qcmfront
+      - qcmapi
+    networks:
+      - backend_db
+    restart: on-failure
+    volumes:
+      # - /certs:/usr/local/etc/haproxy/certs:ro
+      - ./haproxy/config.cfg:/usr/local/etc/haproxy/haproxy.cfg
+
+
+volumes:
+  mg:
+
+networks:
+  backend_db:
